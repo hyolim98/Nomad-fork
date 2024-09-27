@@ -86,17 +86,17 @@ done
 
 #done
 
-echo compiling userspace program...
+#echo compiling userspace program...
 
-docker run -v .:/root/code --rm docklf/compile_environment:glogflagtest bash /root/code/src/docker_commands/compile_userspace_program.sh
+#docker run -v .:/root/code --rm docklf/compile_environment:glogflagtest bash /root/code/src/docker_commands/compile_userspace_program.sh
 
-echo generate microbenchmark access pattern file...
-docker run -v .:/root/code --rm docklf/ubuntu20-kerncomp:aec-v0.2 bash /root/code/src/testing_scripts/microbenchmark/generate_ycsb.sh
+#echo generate microbenchmark access pattern file...
+#docker run -v .:/root/code --rm docklf/ubuntu20-kerncomp:aec-v0.2 bash /root/code/src/testing_scripts/microbenchmark/generate_ycsb.sh
 
 mkdir -p src/tmp/output
 #rm -rf src/tmp/output/*
 
-mv src/testing_scripts/microbenchmark/tmp/*.bin src/tmp/output/
+#mv src/testing_scripts/microbenchmark/tmp/*.bin src/tmp/output/
 mv src/tmp/*.deb src/tmp/output/
-mv src/tmp/build/tpp/tpp_mem_access src/tmp/output/
-mv src/tmp/build/tpp/parse_async_prom src/tmp/output/
+#mv src/tmp/build/tpp/tpp_mem_access src/tmp/output/
+#mv src/tmp/build/tpp/parse_async_prom src/tmp/output/
